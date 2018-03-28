@@ -46,6 +46,8 @@ var _Layout = require('../components/Layout');
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
+var _routes = require('../routes');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/vishalsharma/software_apps/ethereum/kickstart/pages/index.js?entry';
@@ -66,19 +68,23 @@ var CampaignIndex = function (_Component) {
       var items = this.props.campaigns.map(function (address) {
         return {
           header: address,
-          description: _react2.default.createElement('a', {
+          description: _react2.default.createElement(_routes.Link, { route: '/campaigns/' + address, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 20
+            }
+          }, _react2.default.createElement('a', {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 18
+              lineNumber: 21
             }
-          }, 'View Campaign'),
+          }, 'View Campaign')),
           fluid: true
         };
       });
 
       return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 28
         }
       });
     }
@@ -88,27 +94,36 @@ var CampaignIndex = function (_Component) {
       return _react2.default.createElement(_Layout2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 33
         }
       }, _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 34
         }
       }, _react2.default.createElement('h3', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 35
         }
-      }, 'Open Campaigns'), _react2.default.createElement(_semanticUiReact.Button, { floated: 'right',
+      }, 'Open Campaigns'), _react2.default.createElement(_routes.Link, { route: '/campaigns/new', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        }
+      }, _react2.default.createElement('a', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        }
+      }, _react2.default.createElement(_semanticUiReact.Button, { floated: 'right',
         content: 'Create Campaign',
         icon: 'add circle',
         primary: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 39
         }
-      }), this.renderCampaigns()));
+      }))), this.renderCampaigns()));
     }
   }], [{
     key: 'getInitialProps',
@@ -146,4 +161,4 @@ var CampaignIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJMYXlvdXQiLCJDYW1wYWlnbkluZGV4IiwiaXRlbXMiLCJwcm9wcyIsImNhbXBhaWducyIsIm1hcCIsImhlYWRlciIsImFkZHJlc3MiLCJkZXNjcmlwdGlvbiIsImZsdWlkIiwicmVuZGVyQ2FtcGFpZ25zIiwibWV0aG9kcyIsImdldERlcGxveWVkQ2FtcGFpZ25zIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU07O0FBQ2YsQUFBTyxBQUFhOzs7O0FBQ3BCLEFBQU8sQUFBWTs7Ozs7Ozs7O0lBRWIsQTs7Ozs7Ozs7Ozs7c0NBUWMsQUFDaEI7VUFBTSxhQUFRLEFBQUssTUFBTCxBQUFXLFVBQVgsQUFBcUIsSUFBSSxtQkFBVyxBQUNoRDs7a0JBQU8sQUFDRyxBQUNSO3VDQUFhLGNBQUE7O3dCQUFBOzBCQUFBO0FBQUE7QUFBQSxXQUFBLEVBRlIsQUFFUSxBQUNiO2lCQUhGLEFBQU8sQUFHRSxBQUVWO0FBTFEsQUFDTDtBQUZKLEFBQWMsQUFRZCxPQVJjOzsyQ0FRUCxBQUFDLHNCQUFELEFBQU0sU0FBTSxPQUFaLEFBQW1CO29CQUFuQjtzQkFBUCxBQUFPLEFBQ1I7QUFEUTtPQUFBOzs7OzZCQUdBLEFBQ1A7NkJBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FERixBQUNFLEFBQ0EsbUNBQUEsQUFBQyx5Q0FBTyxTQUFSLEFBQWdCLEFBQ2Q7aUJBREYsQUFDVSxBQUNSO2NBRkYsQUFFTyxBQUNMO2lCQUhGOztvQkFBQTtzQkFGRixBQUVFLEFBS0M7QUFMRDtlQUpOLEFBQ0UsQUFDRSxBQU9HLEFBQUssQUFJYjs7Ozs7Ozs7Ozs7O3VCQWhDeUIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHVCQUFoQixBQUF1QyxBOzttQkFBekQ7QTtpREFFQyxFQUFFLFdBQUYsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUppQixBLEFBcUM1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdmlzaGFsc2hhcm1hL3NvZnR3YXJlX2FwcHMvZXRoZXJldW0va2lja3N0YXJ0In0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJMYXlvdXQiLCJMaW5rIiwiQ2FtcGFpZ25JbmRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaWducyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUyxBQUFNOztBQUNmLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQVk7Ozs7QUFDbkIsQUFBUyxBQUFZOzs7Ozs7O0ksQUFFZjs7Ozs7Ozs7Ozs7c0NBUWMsQUFDaEI7VUFBTSxhQUFRLEFBQUssTUFBTCxBQUFXLFVBQVgsQUFBcUIsSUFBSSxtQkFBVyxBQUNoRDs7a0JBQU8sQUFDRyxBQUNSO3VDQUNFLEFBQUMsOEJBQUssdUJBQU4sQUFBMkI7d0JBQTNCOzBCQUFBLEFBQ0E7QUFEQTtXQUFBLGtCQUNBLGNBQUE7O3dCQUFBOzBCQUFBO0FBQUE7QUFBQSxhQUpHLEFBR0gsQUFDQSxBQUdGO2lCQVBGLEFBQU8sQUFPRSxBQUVWO0FBVFEsQUFDTDtBQUZKLEFBQWMsQUFZZCxPQVpjOzsyQ0FZUCxBQUFDLHNCQUFELEFBQU0sU0FBTSxPQUFaLEFBQW1CO29CQUFuQjtzQkFBUCxBQUFPLEFBQ1I7QUFEUTtPQUFBOzs7OzZCQUdBLEFBQ1A7NkJBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FERixBQUNFLEFBRUEsbUNBQUEsQUFBQyw4QkFBSyxPQUFOLEFBQVk7b0JBQVo7c0JBQUEsQUFDQTtBQURBO3lCQUNBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLEFBQUMseUNBQU8sU0FBUixBQUFnQixBQUNkO2lCQURGLEFBQ1UsQUFDUjtjQUZGLEFBRU8sQUFDTDtpQkFIRjs7b0JBQUE7c0JBTEosQUFHRSxBQUNBLEFBQ0UsQUFPRDtBQVBDO2lCQVBSLEFBQ0UsQUFDRSxBQVlHLEFBQUssQUFJYjs7Ozs7Ozs7Ozs7O3VCQXpDeUIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHVCQUFoQixBQUF1QyxBOzttQkFBekQ7QTtpREFFQyxFQUFFLFdBQUYsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUppQixBLEFBOEM1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdmlzaGFsc2hhcm1hL3NvZnR3YXJlX2FwcHMvZXRoZXJldW0va2lja3N0YXJ0In0=
