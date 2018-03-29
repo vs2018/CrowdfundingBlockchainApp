@@ -15,10 +15,8 @@ class RequestNew extends Component {
     errorMessage: ''
   }
 
-
   static async getInitialProps(props) {
     const { address } = props.query
-
     return { address }
   }
 
@@ -48,8 +46,8 @@ class RequestNew extends Component {
   render() {
     return (
       <Layout>
-        <Link>
-          <a route={`/campaigns/${this.props.address}/requests`}>
+        <Link route={`/campaigns/${this.props.address}/requests`}>
+          <a>
           Back
           </a>
         </Link>
